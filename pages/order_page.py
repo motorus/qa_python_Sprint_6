@@ -54,10 +54,6 @@ class OrderPage(BasePage):
     def get_windows_order_pass_text(self):
         return self.wait_and_find_element(OrderPageForm2Locators.FINAL_ORDER_WINDOW).text
 
-    def click_date(self, date):
-        date = date.split('.')[0]
-        return By.XPATH, f".//div[contains(@aria-label, '{date}-е')]"
-
     def create_order(self, button_order, name, surname, address, metro, phone, date, period, colour_scooter, comment):
 
         self.open_page(Urls.main_page)
