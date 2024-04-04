@@ -33,7 +33,8 @@ class OrderPageForm2Locators:
     FIELD_INPUT_DATE        = By.CSS_SELECTOR, "input[placeholder='* Когда привезти самокат']"
     # Выбор конкретной даты
     SELECTED_DATE           = By.XPATH, ".//div[@role='option' and (contains(text(), '{}'))]"
-
+    # Число месяца для выбора
+    DAY_NUMBER              = By.XPATH, ".//div[contains(@aria-label, '{}-е')]"
     # Период аренды
     FIELD_INPUT_PERIOD      = By.XPATH, ".//div[@class='Dropdown-placeholder' and (contains(text(), '* Срок аренды'))]"
     # Комментарий для курьера

@@ -32,3 +32,6 @@ class BasePage:
     def format_locator(locator, param):
         search_type, search_text = locator
         return (search_type, search_text.format(param))
+
+    def execute_script(self, script, arg):
+        self.driver.execute_script(script, arg)
